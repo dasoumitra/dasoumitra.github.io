@@ -18,12 +18,9 @@ export default function About() {
     },
     {
       title: "Manufacturing & Industrialisation",
-      description: "Process development, optimisation and production ramp-up",
+      description: "Process development, optimisation, production ramp-up, Airbus engineering & consulting",
     },
-    {
-      title: "Airbus Engineering & Consulting",
-      description: "Systems engineering, MBSE and industrial process improvement",
-    },
+    
   ];
 
   return (

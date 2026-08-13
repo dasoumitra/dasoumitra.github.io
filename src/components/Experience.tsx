@@ -1,127 +1,88 @@
 const experiences = [
   {
-    period: "2023 — PRESENT",
-    company: "Tata Technologies Limited",
+    period: "09/2023 — Present",
     role: "Senior Engineer",
-    location: "Airbus Offshore Development Centre · Bengaluru, India",
-
-    focus: "Aerospace Manufacturing · Industrialisation · Engineering Consulting",
-
-    areas: [
-      {
-        title: "A350 VTP Manufacturing",
-        description:
-          "Developed manufacturing solutions and tooling concepts using CATIA V5 to optimise vacuum bagging processes for Airbus A350 Vertical Tail Plane production.",
-      },
-      {
-        title: "Production Ramp-Up",
-        description:
-          "Supported Airbus Stade production ramp-up through manufacturing process optimisation, MES implementation, process validation and collaboration with Manufacturing Engineering and Production teams.",
-      },
-      {
-        title: "Airbus Toulouse",
-        description:
-          "Led Airbus Business Process improvements as Project Manager for the FU.IN.03.02 department, focusing on industrial system development and jigs & tools processes.",
-      },
-      {
-        title: "Flight Testing Tools",
-        description:
-          "Served as SME for an extensive audit of tools used by Airbus 1V Flight Testing and 1YY Avionics teams, using Skywise to improve data accessibility and operational efficiency.",
-      },
+    company: "Tata Technologies · Airbus Offshore Development Centre",
+    location: "Bengaluru, India",
+    title: "Airbus Engineering & Industrialisation",
+    description:
+      "Manufacturing, consulting & engineering process improvement",
+    details: [
+      "Developed manufacturing solutions and tooling concepts using CATIA V5 to optimise vacuum bagging processes for Airbus A350 Vertical Tail Plane (VTP) production.",
+      "Supported Airbus Stade production ramp-up through manufacturing process optimisation, MES implementation, process validation, and collaboration with Manufacturing Engineering and Production teams.",
+      "Led Airbus Business Process (ABP) improvements as Project Manager for the FU.IN.03.02 department in Toulouse, focusing on industrial system development and jigs & tools processes.",
+      "Served as Subject Matter Expert for an extensive audit of tools used by Airbus 1V Flight Testing and 1YY Avionics Hardware/Software & Simulations teams, utilising Skywise.",
     ],
-
     achievement:
-      "Led the 1V tools audit project and earned the “Mission Impossible” award for outstanding execution. Conducted on-site engagements at Airbus Toulouse and Stade to implement tailored process improvements.",
+      "Led the 1V tools audit covering 151 tools, earning the “Mission Impossible” award for outstanding execution. Conducted on-site engagements at Airbus Toulouse and Stade.",
   },
 
   {
-    period: "2022 — 2023",
+    period: "01/2022 — 09/2023",
+    role: "Assistant Manager · Aerospace Division",
     company: "Bharat Forge Limited",
-    role: "Assistant Manager — Aerospace Division",
-    location: "Turbomachinery & Aerospace Test Facility · Pune, India",
-
-    focus: "Turbomachinery Testing · Test Facility Development · Automation",
-
-    areas: [
-      {
-        title: "Turbomachinery Testing",
-        description:
-          "Conducted performance testing of turbomachinery components for aerospace, locomotive and defence applications at a large-scale turbomachinery test facility.",
-      },
-      {
-        title: "Test Facility Development",
-        description:
-          "Designed adapters, mounting beds and piping systems for marine turbocharger testing using PTC Creo Parametric and SolidWorks, while overseeing manufacturing and integration.",
-      },
-      {
-        title: "ACM Test Bed",
-        description:
-          "Spearheaded the development and automation of an Air Cycle Machine test bed for Limited Qualification Tests and successfully supported subsequent testing.",
-      },
-      {
-        title: "Engineering Data & Monitoring",
-        description:
-          "Developed an IoT-based turbomachinery health monitoring system using real-time data acquisition to support predictive maintenance and reduce downtime.",
-      },
+    location: "Pune, India",
+    title: "Turbomachinery Testing & Test Facility Development",
+    description:
+      "Performance testing, test facility development & engineering",
+    details: [
+      "Conducted performance testing of turbomachinery components for aerospace, locomotive, and defence applications.",
+      "Designed adapters, mounting beds, and piping systems for Marine Turbocharger testing using PTC Creo Parametric and SolidWorks.",
+      "Spearheaded the development and automation of an Air Cycle Machine test bed for Limited Qualification Tests.",
+      "Developed an IoT-based turbomachinery health monitoring system using real-time data acquisition.",
     ],
-
     achievement:
-      "Improved test-result delivery time by 10% through optimised resource allocation, successfully adapted marine turbochargers for testing, and executed ACM test-bed automation.",
+      "Improved test result delivery time by 10% through optimised resource allocation and successfully adapted Marine turbochargers for testing within the facility.",
   },
 
   {
-    period: "2020 — 2021",
-    company: "FHWN Aircraft Conceptual Design",
+    period: "07/2020 — 10/2021",
     role: "Performance Analyst",
+    company: "FHWN Aircraft Conceptual Design",
     location: "Wiener Neustadt, Austria",
-
-    focus: "Aircraft Design · Performance Analysis · Digital Aircraft Engineering",
-
-    areas: [
-      {
-        title: "Trogon Autonomous Cargo UAV",
-        description:
-          "Designed and optimised an autonomous cargo aircraft, modifying aerodynamic and structural characteristics using CATIA V5.",
-      },
-      {
-        title: "Aircraft Performance",
-        description:
-          "Performed drag estimation, aircraft sizing, performance analysis and flight-envelope calculations using MATLAB and Excel.",
-      },
-      {
-        title: "Digital Aircraft Design",
-        description:
-          "Developed a Python-based converter tool to integrate CATIA aircraft models with CPACS Creator and improve the aircraft design workflow.",
-      },
+    title: "Aircraft Performance & Conceptual Design",
+    description:
+      "Aircraft design, performance analysis & digital engineering",
+    details: [
+      "Designed and optimised the autonomous cargo UAV Trogon, modifying aerodynamic and structural concepts using CATIA V5.",
+      "Conducted drag estimation, aircraft performance analysis, and flight envelope calculations using MATLAB and Excel.",
+      "Developed a Python-based converter tool integrating CATIA aircraft models with CPACSCreator.",
     ],
-
     achievement:
-      "Supported the successful flight of the Trogon prototype, created its geometry in CPACS Creator and reduced the simulation period by approximately 60% compared with conventional ANSYS-based analysis.",
+      "Supported the successful flight of the Trogon prototype and reduced the simulation period by approximately 60% compared with conventional ANSYS-based analysis.",
   },
 
   {
-    period: "2019",
-    company: "Stuttgart Wind Energy · Institute of Aircraft Design",
+    period: "03/2019 — 08/2019",
     role: "Master Thesis Researcher",
+    company: "Stuttgart Wind Energy · Institute of Aircraft Design",
     location: "Stuttgart, Germany",
-
-    focus: "FEA · Structural Analysis · Engineering Optimisation",
-
-    areas: [
-      {
-        title: "Finite Element Analysis",
-        description:
-          "Conducted FEA of wind turbine generators using ANSYS Mechanical to simulate mechanical deformation under various load cases.",
-      },
-      {
-        title: "Structural Optimisation",
-        description:
-          "Developed an optimised structural topology for a parameterised generator design.",
-      },
+    title: "Structural Analysis & FEA",
+    description:
+      "Finite element analysis and structural optimisation",
+    details: [
+      "Conducted finite element analysis of wind turbine generators using ANSYS Mechanical.",
+      "Simulated mechanical deformation under various load cases.",
+      "Developed an optimised structural topology for a parameterised generator design.",
     ],
-
     achievement:
-      "Identified the minimum required load points for effective structural analysis, supporting more efficient evaluation of future generator designs.",
+      "Identified the minimum required load points for effective structural analysis, supporting future wind turbine design improvements.",
+  },
+
+  {
+    period: "11/2014 — 12/2014",
+    role: "Trainee",
+    company: "Garden Reach Shipbuilders & Engineers Ltd. · Internship",
+    location: "Garden Reach, India",
+    title: "Naval Ship Construction & Design",
+    description:
+      "Construction and design of Anti-Submarine Warfare naval ships",
+    details: [
+      "Gained practical exposure to the design and construction processes of Anti-Submarine Warfare (ASW) stealth corvettes.",
+      "Received hands-on training during the development of INS Kadmatt, an ASW stealth corvette for the Indian Navy.",
+    ],
+    achievement:
+      "Developed an understanding of naval ship design, construction processes, and the integration of engineering disciplines involved in defence shipbuilding.",
   },
 ];
 
@@ -139,130 +100,91 @@ export default function Experience() {
             Experience
           </p>
 
-          <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Engineering across
             <br />
             aerospace programmes.
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400">
-            Experience spanning aerospace manufacturing, turbomachinery
-            testing, aircraft performance engineering and engineering
-            consulting across India and Europe.
+            Experience spanning aerospace manufacturing, industrialisation,
+            turbomachinery testing, aircraft performance and engineering
+            consulting.
           </p>
         </div>
 
-        {/* Experience timeline */}
-        <div className="mt-20">
+        {/* Timeline */}
+        <div className="relative mt-20 ml-1 border-l border-blue-500/30">
 
-          {/* Vertical timeline */}
-          <div className="relative">
+          {experiences.map((experience) => (
+            <div
+              key={`${experience.period}-${experience.role}`}
+              className="relative pb-16 pl-10 last:pb-0"
+            >
 
-            <div className="absolute left-[7px] top-3 hidden h-[calc(100%-24px)] w-px bg-blue-500/20 md:block" />
+              {/* Timeline node */}
+              <div className="absolute -left-[8px] top-1 flex h-4 w-4 items-center justify-center rounded-full border border-blue-400 bg-[#07111f]">
+                <div className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+              </div>
 
-            <div className="space-y-16">
+              {/* Period */}
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-400">
+                {experience.period}
+              </p>
 
-              {experiences.map((experience, index) => (
-                <article
-                  key={`${experience.company}-${experience.period}`}
-                  className="relative"
-                >
+              {/* Role */}
+              <h3 className="mt-3 text-2xl font-semibold text-white">
+                {experience.role}
+              </h3>
 
-                  {/* Timeline marker */}
-                  <div className="absolute left-0 top-1 hidden md:block">
-                    <div className="flex h-4 w-4 items-center justify-center rounded-full border border-blue-400 bg-[#07111f]">
-                      <div className="h-1.5 w-1.5 rounded-full bg-blue-400" />
-                    </div>
-                  </div>
+              {/* Company */}
+              <p className="mt-1 text-sm text-slate-400">
+                {experience.company}
+              </p>
 
-                  <div className="grid gap-8 md:grid-cols-[180px_1fr]">
+              {/* Location */}
+              <p className="mt-1 text-sm text-slate-500">
+                {experience.location}
+              </p>
 
-                    {/* Date */}
-                    <div className="pl-8">
-                      <p className="text-xs font-medium tracking-[0.18em] text-blue-400">
-                        {experience.period}
-                      </p>
-                    </div>
+              {/* Experience title */}
+              <div className="mt-8">
+                <h4 className="text-lg font-medium text-slate-200">
+                  {experience.title}
+                </h4>
 
-                    {/* Main content */}
-                    <div
-                      className={`${
-                        index !== experiences.length - 1
-                          ? "border-b border-white/10 pb-16"
-                          : ""
-                      }`}
-                    >
+                <p className="mt-2 text-sm text-blue-300/70">
+                  {experience.description}
+                </p>
+              </div>
 
-                      {/* Company heading */}
-                      <div>
-                        <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                          {experience.company}
-                        </h3>
+              {/* Details */}
+              <ul className="mt-6 max-w-4xl space-y-3">
+                {experience.details.map((detail) => (
+                  <li
+                    key={detail}
+                    className="relative pl-5 text-sm leading-7 text-slate-400"
+                  >
+                    <span className="absolute left-0 top-[0.7rem] h-1 w-1 rounded-full bg-slate-600" />
+                    {detail}
+                  </li>
+                ))}
+              </ul>
 
-                        <p className="mt-2 text-base text-slate-300">
-                          {experience.role}
-                        </p>
+              {/* Key Achievement */}
+              <div className="mt-7 border-l-2 border-blue-500/40 pl-4">
+                <p className="text-xs font-medium uppercase tracking-[0.15em] text-slate-500">
+                  Key Achievement
+                </p>
 
-                        <p className="mt-1 text-sm text-slate-500">
-                          {experience.location}
-                        </p>
-
-                        {/* Focus */}
-                        <div className="mt-5">
-                          <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
-                            Focus
-                          </p>
-
-                          <p className="mt-2 text-sm text-blue-300">
-                            {experience.focus}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Areas */}
-                      <div className="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2">
-
-                        {experience.areas.map((area) => (
-                          <div
-                            key={area.title}
-                            className="border-l border-blue-500/30 pl-5"
-                          >
-                            <h4 className="text-sm font-medium text-white">
-                              {area.title}
-                            </h4>
-
-                            <p className="mt-2 text-sm leading-6 text-slate-500">
-                              {area.description}
-                            </p>
-                          </div>
-                        ))}
-
-                      </div>
-
-                      {/* Achievement */}
-                      <div className="mt-10 overflow-hidden border border-blue-500/20 bg-blue-500/[0.04]">
-
-                        <div className="flex items-center gap-3 border-b border-blue-500/10 px-5 py-3">
-                          <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
-
-                          <p className="text-[10px] font-medium uppercase tracking-[0.25em] text-blue-400">
-                            Key Achievement
-                          </p>
-                        </div>
-
-                        <p className="px-5 py-5 text-sm leading-7 text-slate-300">
-                          {experience.achievement}
-                        </p>
-
-                      </div>
-
-                    </div>
-                  </div>
-                </article>
-              ))}
+                <p className="mt-2 max-w-4xl text-sm leading-7 text-slate-300">
+                  {experience.achievement}
+                </p>
+              </div>
 
             </div>
-          </div>
+          ))}
+
         </div>
       </div>
     </section>

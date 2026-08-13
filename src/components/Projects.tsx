@@ -5,8 +5,7 @@ import { useState } from "react";
 type Category =
   | "All"
   | "Professional"
-  | "Aircraft & Space"
-  | "Engineering"
+  | "Academic"
   | "Research";
 
 type Project = {
@@ -16,116 +15,162 @@ type Project = {
   category: Exclude<Category, "All">;
   description: string;
   tools: string[];
+  image?: string;
   featured?: boolean;
 };
 
 const projects: Project[] = [
   {
-    number: "01",
-    title: "A350 VTP",
-    subtitle: "Manufacturing Ramp-Up",
-    category: "Professional",
-    description:
-      "Manufacturing process optimisation and tooling concepts supporting Airbus A350 Vertical Tail Plane production and ramp-up.",
-    tools: ["CATIA V5", "Manufacturing", "Industrialisation"],
-    featured: true,
-  },
+  number: "01",
+  title: "A350 VTP",
+  subtitle: "Manufacturing Ramp-Up",
+  category: "Professional",
+  description:
+    "Manufacturing process optimisation and tooling concepts supporting Airbus A350 Vertical Tail Plane production and ramp-up.",
+  tools: ["CATIA V5", "Manufacturing", "Industrialisation"],
+  image: "/a350-vtp-ramp-up.png",
+  featured: true,
+},
+   {
+  number: "02",
+  title: "A350 VTP",
+  subtitle: "Vacuum-Bagging Improvement",
+  category: "Professional",
+  description:
+    "Manufacturing process optimisation focused on reducing manual handling, improving ergonomics and developing practical solutions for A350 VTP vacuum-bagging operations.",
+  tools: ["Process Optimisation", "Tooling", "CATIA V5", "Automation"],
+  image: "/a350-vacuum-bagging.png",
+  featured: true,
+},
   {
-    number: "02",
-    title: "Flight Testing",
-    subtitle: "Tools Audit",
-    category: "Professional",
-    description:
-      "Large-scale audit of tools supporting Airbus Flight Testing and Avionics teams, improving tool visibility and operational efficiency.",
-    tools: ["Skywise", "Tool Audit", "Process Improvement"],
-    featured: true,
-  },
-  {
-    number: "03",
-    title: "Airbus Toulouse",
-    subtitle: "Industrial Systems",
-    category: "Professional",
-    description:
-      "Business process improvement project focused on industrial system development and jigs & tools processes.",
-    tools: ["Project Management", "Process Improvement", "Jigs & Tools"],
-    featured: true,
-  },
+  number: "03",
+  title: "Flight Testing",
+  subtitle: "Application Portfolio Assessment",
+  category: "Professional",
+  description:
+    "Assessment of engineering application portfolios to identify technical debt, operational risks and modernization opportunities across Flight Testing and engineering environments.",
+  tools: [
+    "Portfolio Assessment",
+    "Risk Analysis",
+    "Modernization",
+    "Digital Engineering",
+  ],
+  image: "/flight-testing-tools-audit.png",
+  featured: true,
+},
+
   {
     number: "04",
-    title: "Turbomachinery",
-    subtitle: "Test Facility Development",
+    title: "Industrial Systems",
+    subtitle: "Jigs & Tools Process Improvement",
     category: "Professional",
     description:
-      "Performance testing, test facility development and automation activities for aerospace turbomachinery.",
-    tools: ["Creo", "SolidWorks", "Testing", "Automation"],
+      "Industrial system improvement across jigs & tools, technical process standardisation and ABP optimisation, supporting tooling design activities and cross-site alignment across Airbus industrial teams.",
+    tools: ["Project Management", "Process Improvement", "Jigs & Tools"],
+    image: "/airbus-industrial-systems.png",
     featured: true,
   },
   {
-    number: "05",
-    title: "Trogon",
-    subtitle: "Autonomous Cargo Aircraft",
-    category: "Aircraft & Space",
-    description:
-      "Preliminary design and performance analysis of an autonomous cargo aircraft, including aerodynamics, sizing and flight-envelope analysis.",
-    tools: ["CATIA V5", "MATLAB", "Python", "CPACS"],
-    featured: true,
-  },
+  number: "05",
+  title: "Turbomachinery",
+  subtitle: "Test Infrastructure & Performance Analysis",
+  category: "Professional",
+  description:
+    "Adaptation and integration of existing turbomachinery test infrastructure for marine, locomotive and defence applications, including test-bed modifications, instrumentation, testing and performance analysis.",
+  tools: [
+    "Test Engineering",
+    "Creo",
+    "Instrumentation",
+    "Performance Analysis",
+  ],
+  image: "/turbomachinery-test-infrastructure.png",
+  featured: true,
+},
+{
+  number: "06",
+  title: "Air Cycle Machine",
+  subtitle: "Test-Bed Development & Qualification",
+  category: "Professional",
+  description:
+    "Modification and improvement of an existing Air Cycle Machine test facility, including mounting, piping, instrumentation, qualification-test logic and execution of the first successful qualification campaign.",
+  tools: [
+    "Test Engineering",
+    "Qualification",
+    "Instrumentation",
+    "Automation",
+  ],
+  image: "/air-cycle-machine-acm.png",
+  featured: true,
+},
   {
-    number: "06",
+  number: "07",
+  title: "Trogon",
+  subtitle: "Autonomous Cargo Aircraft",
+  category: "Academic",
+  description:
+    "Aircraft performance analysis for an autonomous cargo aircraft, using project CFD results to evaluate take-off, landing, climb, cruise and propulsion requirements.",
+  tools: ["CATIA V5", "MATLAB", "Python", "CPACS"],
+  image: "/trogon-hero.png",
+  featured: true,
+},
+  {
+    number: "08",
     title: "Ancile",
     subtitle: "CubeSat Mission Concept",
-    category: "Aircraft & Space",
+    category: "Academic",
     description:
       "Mission concept for a CubeSat fleet designed to provide advance solar-storm information for protection of a crewed Mars transfer mission.",
     tools: ["Mission Design", "Propulsion", "Delta-V Analysis"],
+    image: "/ancile-cubesat-constellation.png",
+    
   },
   {
-    number: "07",
+    number: "09",
     title: "Unmanned Space Vehicle",
     subtitle: "Mars Propulsion Concept",
-    category: "Aircraft & Space",
+    category: "Academic",
     description:
       "Conceptual design of a monopropellant propulsion system for an unmanned Mars vehicle, including mission and performance analysis.",
     tools: ["Rocket Propulsion", "MATLAB", "Mission Analysis"],
   },
   {
-    number: "08",
+    number: "10",
     title: "Aircraft Design",
     subtitle: "Wing & Stabiliser Structure",
-    category: "Aircraft & Space",
+    category: "Academic",
     description:
       "Preliminary design of wing and stabiliser structures for a conceptual aircraft powered by two Kuznetsov NK-93 engines.",
     tools: ["CATIA V5", "Aircraft Structures"],
   },
   {
-    number: "09",
+    number: "11",
     title: "Composite Manufacturing",
     subtitle: "CFRP Bracket",
-    category: "Engineering",
+    category: "Academic",
     description:
       "Designed and manufactured a CFRP bracket using the vacuum bagging technique.",
     tools: ["Composite Manufacturing", "Vacuum Bagging"],
   },
   {
-    number: "10",
+    number: "12",
     title: "Computational Fluid Dynamics",
     subtitle: "NACA 0012 Airfoil",
-    category: "Engineering",
+    category: "Academic",
     description:
       "Evaluated turbulence models for the simulation of flow over a NACA 0012 airfoil.",
     tools: ["ANSYS Fluent", "CFD", "Aerodynamics"],
   },
   {
-    number: "11",
+    number: "13",
     title: "Aircraft Wing",
     subtitle: "Stress & Weight Optimisation",
-    category: "Engineering",
+    category: "Academic",
     description:
       "Performed finite element analysis to optimise model aircraft wing thickness and weight for a defined load case.",
     tools: ["ANSYS Mechanical", "FEA", "Structural Analysis"],
   },
   {
-    number: "12",
+    number: "14",
     title: "Wind Turbine Generator",
     subtitle: "Master's Thesis",
     category: "Research",
@@ -135,7 +180,7 @@ const projects: Project[] = [
     featured: true,
   },
   {
-    number: "13",
+    number: "15",
     title: "Aluminium Alloy",
     subtitle: "Bachelor's Thesis",
     category: "Research",
@@ -148,8 +193,7 @@ const projects: Project[] = [
 const filters: Category[] = [
   "All",
   "Professional",
-  "Aircraft & Space",
-  "Engineering",
+  "Academic",
   "Research",
 ];
 
@@ -214,7 +258,19 @@ export default function Projects() {
               }`}
             >
 
-              {/* Background glow */}
+
+             {/* Project image */}
+{project.image && (
+  <div className="relative -mx-7 -mt-7 mb-7 overflow-hidden">
+    <img
+      src={project.image}
+      alt={`${project.title} — ${project.subtitle}`}
+      className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-[#07111f] via-transparent to-transparent" />
+  </div>
+)}
+ {/* Background glow */}
               <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-blue-500/5 blur-3xl transition duration-500 group-hover:bg-blue-500/10" />
 
               {/* Number */}
@@ -257,12 +313,104 @@ export default function Projects() {
               </div>
 
               {/* Explore */}
-              <div className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400">
-                Explore Project
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </div>
+{project.title === "Trogon" ? (
+  <a
+    href="/projects/trogon"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+) : project.title === "A350 VTP" &&
+  project.subtitle === "Manufacturing Ramp-Up" ? (
+  <a
+    href="/projects/a350-vtp"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+) : project.title === "A350 VTP" &&
+  project.subtitle === "Vacuum-Bagging Improvement" ? (
+  <a
+    href="/projects/a350-vacuum-bagging"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+  ) : project.title === "Flight Testing" ? (
+  <a
+    href="/projects/flight-testing"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+  
+  ) : project.title === "Industrial Systems" ? (
+  <a
+    href="/projects/industrial-systems"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+   
+   ) : project.title === "Turbomachinery" ? (
+  <a
+    href="/projects/turbomachinery"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+   
+   ) : project.title === "Air Cycle Machine" ? (
+  <a
+    href="/projects/air-cycle-machine"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+  
+   ) : project.title === "Ancile" ? (
+  <a
+    href="/projects/ancile"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+) : (
+  <div className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400">
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </div>
+)}
 
             </article>
           ))}
