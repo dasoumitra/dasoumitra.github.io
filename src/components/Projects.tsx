@@ -132,6 +132,7 @@ const projects: Project[] = [
     description:
       "Conceptual design of a monopropellant propulsion system for an unmanned Mars vehicle, including mission and performance analysis.",
     tools: ["Rocket Propulsion", "MATLAB", "Mission Analysis"],
+     image: "/unmanned-mars-propulsion.png",
   },
   {
     number: "10",
@@ -141,6 +142,7 @@ const projects: Project[] = [
     description:
       "Preliminary design of wing and stabiliser structures for a conceptual aircraft powered by two Kuznetsov NK-93 engines.",
     tools: ["CATIA V5", "Aircraft Structures"],
+     image: "/aircraft-design-structure.png",
   },
   {
     number: "11",
@@ -150,6 +152,7 @@ const projects: Project[] = [
     description:
       "Designed and manufactured a CFRP bracket using the vacuum bagging technique.",
     tools: ["Composite Manufacturing", "Vacuum Bagging"],
+    image: "/composite-cfrp-bracket.png",
   },
   {
     number: "12",
@@ -159,34 +162,55 @@ const projects: Project[] = [
     description:
       "Evaluated turbulence models for the simulation of flow over a NACA 0012 airfoil.",
     tools: ["ANSYS Fluent", "CFD", "Aerodynamics"],
+    image: "/computational-fluid-dynamics.png",
   },
   {
-    number: "13",
-    title: "Aircraft Wing",
-    subtitle: "Stress & Weight Optimisation",
-    category: "Academic",
-    description:
-      "Performed finite element analysis to optimise model aircraft wing thickness and weight for a defined load case.",
-    tools: ["ANSYS Mechanical", "FEA", "Structural Analysis"],
+  number: "13",
+  title: "Aircraft Wing",
+  subtitle: "FEA & Weight Optimisation",
+  category: "Academic",
+  description:
+    "Finite element analysis and structural optimisation of a model aircraft wing using ANSYS, with thickness sizing to satisfy deformation, strain and buckling requirements while reducing weight.",
+  tools: [
+    "ANSYS Mechanical",
+    "FEA",
+    "Structural Analysis",
+    "Optimisation",
+  ],
+  image: "/aircraft-wing-fea.png",
+  featured: true,
   },
   {
-    number: "14",
-    title: "Wind Turbine Generator",
-    subtitle: "Master's Thesis",
-    category: "Research",
-    description:
-      "FEA-based investigation of mechanical deformation and structural topology for a parameterised wind turbine generator design.",
-    tools: ["ANSYS Mechanical", "FEA", "Structural Optimisation"],
-    featured: true,
+  number: "14",
+  title: "Wind Turbine Generator",
+  subtitle: "FEA & Load-Point Optimisation",
+  category: "Research",
+  description:
+    "Master's thesis investigating the structural behaviour of a direct-drive permanent-magnet wind turbine generator using CATIA V5 and ANSYS Mechanical, with a focus on load-point distribution, deformation and structural-analysis efficiency.",
+  tools: [
+    "ANSYS Mechanical",
+    "CATIA V5",
+    "FEA",
+    "Structural Analysis",
+  ],
+  image: "/wind-turbine-generator.png",
+  featured: true,
   },
   {
-    number: "15",
-    title: "Aluminium Alloy",
-    subtitle: "Bachelor's Thesis",
-    category: "Research",
-    description:
-      "Investigation of the effects of hot and cold rolling on the mechanical and microstructural properties of aluminium alloy.",
-    tools: ["Materials", "Metal Forming", "Manufacturing"],
+  number: "15",
+  title: "Aluminium Alloy",
+  subtitle: "Hot & Cold Rolling Study",
+  category: "Research",
+  description:
+    "Bachelor's thesis investigating the effect of hot and cold rolling on the mechanical and microstructural properties of aluminium alloy, including development of a two-in-one rolling mill and experimental hardness and impact testing.",
+  tools: [
+    "Metal Forming",
+    "Rolling Process",
+    "Materials Testing",
+    "Manufacturing",
+  ],
+  image: "/aluminium-rolling-study.png",
+  featured: true,
   },
 ];
 
@@ -395,6 +419,83 @@ export default function Projects() {
    ) : project.title === "Ancile" ? (
   <a
     href="/projects/ancile"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+  
+  ) : project.title === "Unmanned Space Vehicle" ? (
+  <a
+    href="/projects/unmanned-mars"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+    ) : project.title === "Aircraft Design" ? (
+  <a
+    href="/projects/aircraft-design"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+  
+  ) : project.title === "Composite Manufacturing" ? (
+  <a
+    href="/projects/composite-manufacturing"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+  
+  ) : project.title === "Aircraft Wing" ? (
+  <a
+    href="/projects/aircraft-wing"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+  
+  ) : project.title === "Computational Fluid Dynamics" ? (
+  <a
+    href="/projects/computational-fluid-dynamics"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+  
+  ) : project.title === "Wind Turbine Generator" ? (
+  <a
+    href="/projects/wind-turbine-generator"
+    className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
+  >
+    Explore Project
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+  
+  ) : project.title === "Aluminium Alloy" ? (
+  <a
+    href="/projects/aluminium-alloy"
     className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-slate-500 transition group-hover:text-blue-400"
   >
     Explore Project
